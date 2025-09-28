@@ -1,4 +1,4 @@
-# Animal Classifier: Cats, Dogs, and Snakes
+# Neural Network CLassifier
 
 ## Overview
 
