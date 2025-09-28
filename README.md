@@ -1,14 +1,14 @@
 # Neural Network Classifier
 
-## Overview
+## *Overview*
 
 This project implements a neural network-based image classifier designed to distinguish between three distinct animal categories: **Cats**, **Dogs**, and **Snakes**. The model is built using a fully connected (Dense) architecture and trained on image data.
 
-## Configuration and Architecture
+## *Configuration and Architecture*
 
 The model's behavior and structure are defined in the `config.py` file.
 
-### Key Configuration Parameters
+### *Key Configuration Parameters*
 
 | Parameter | Value | Description |
 | :--- | :--- | :--- |
@@ -21,7 +21,7 @@ The model's behavior and structure are defined in the `config.py` file.
 | `hidden_layer2_size` | 32 | Neurons in the second hidden layer. |
 | `dropout_rate` | **0.5** | Probability of setting an activation to zero for regularization. |
 
-### Neural Network Structure
+### *Neural Network Structure*
 
 The architecture is a simple Deep Neural Network (DNN) with two hidden layers:
 
@@ -33,7 +33,7 @@ The architecture is a simple Deep Neural Network (DNN) with two hidden layers:
 
 ---
 
-## Performance Results: Identifying Overfitting
+## *Performance Results: Identifying Overfitting*
 
 The initial training results show a clear case of **overfitting**, where the model has learned the training data exceptionally well but performs poorly on unseen data.
 
@@ -42,12 +42,12 @@ The initial training results show a clear case of **overfitting**, where the mod
 | **Training Accuracy** | **97.21%** |
 | **Test Accuracy** | **53.33%** |
 
-### Analysis
+### *Analysis*
 
 The dropout of 0.5 prevents model from overfitting but from stats it seems like it is not sufficient.
 The significant gap between the training accuracy ($\approx 97\%$) and the test accuracy ($\approx 53\%$) indicates that the model has **memorized** the training set's noise and specific examples.
 
-## Training Visualization
+## *Training Visualization*
 
 The following plot illustrates the loss history and convergence during the training process. A typical sign of overfitting here would be the training loss continuing to decrease while the validation/test loss begins to increase.
 
@@ -55,7 +55,7 @@ The following plot illustrates the loss history and convergence during the train
 
 ---
 
-## Mitigation Strategies
+## *Mitigation Strategies*
 
 To achieve a higher and more balanced test accuracy, the following steps are prioritized:
 
@@ -65,6 +65,6 @@ To achieve a higher and more balanced test accuracy, the following steps are pri
     * **L1/L2 Regularization:** Add L1 or L2 weight decay to the hidden layers.
 3.  **Data Augmentation:** Implement techniques like random rotation, flipping, etc.
 
-## Conclusion
+## *Conclusion*
 
 The current model successfully achieved near-perfect performance on the training set, but its low test accuracy highlights a critical **generalization problem** due to overfitting. Future development will focus on implementing a **CNN architecture** and employing stronger regularization techniques to close the gap between training and testing performance, aiming for a robust and reliable classifier for cats, dogs, and snakes.
